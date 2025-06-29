@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <!-- Background Particles -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="logo" />
+    <button id="modeToggle" class="mode-toggle">🌙 Night Mode</button>
+  </header>
+
+  <!-- Search Bar -->
+  <form class="user-form" id="form">
+    <input type="text" id="search" placeholder="🔍 Search a GitHub User" autocomplete="onn" />
+  </form>
+
+  <!-- Suggestions Dropdown -->
+  <ul id="suggestions" class="suggestions hidden"></ul>
+
+  <!-- Main Content -->
+  <main id="main"></main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Created with ❤️ by USAMA</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

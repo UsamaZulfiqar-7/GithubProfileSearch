@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#212a72;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('Main-bg.png') no-repeat center center/cover;
+  background-color: #0d0d0d; /* fallback */
+}
+
+
+.header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 40px;
+  
+}
+
+.mode-toggle {
+  background-color:white;
+  color: #2a2a72;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 2rem;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: #4c2885;
+  border: none;
+  border-radius: 10px;
+  color: #ffd700;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+  color: black;
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  max-width: 800px;
+  background-color: #4c2885;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid #ffd700;
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  color: #ffd700;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  color: #ffd700;
+  background-color: #212a72;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Night Mode */
+body.night {
+  background-color: #111;
+  color: #ffd700;
+}
+
+body.night .card {
+  background-color: #222;
+}
+
+body.night .user-form input {
+  background-color: #333;
+}
+
+body.night .repo {
+  background-color: #444;
+}
+
+body.night .mode-toggle {
+  background-color: #333;
+  color: #ffd700;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+
+  .user-info {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .user-info ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+/* Light Mode */
+body.light {
+  background-color: white; /* blue */
+  color: black;
+}
+
+body.light .card {
+  background-color: white;
+  color: black;
+}
+
+body.light .repo {
+  background-color: #e0e0e0;
+  color: #ffd700;
+}
+
+body.light .mode-toggle {
+  background-color: white;
+  color: black;
+}
+
+body.light .user-form input {
+  background-color:white;
+  color: #ffd700;
+}
+footer {
+  margin-top: 2rem;
+  font-size: 60px;
+  font-weight: 300;
+  color: black; /* default for light mode */
+  font-weight: initial;
+  transition: color 0.3s;
+}
+
+/* Change footer text color in night mode */
+body.night .footer {
+  color: #ffd700;
+  font-size: 60px;
+}body.light #particles-js {
+  background-color: #757575;
+  color: black;
+}
+body.night .user-form input::placeholder{
+  color:#ffd700
+}
+body.light .repo{
+  color: black;
+}
+body.light .user-info{
+  color: black;
+}
+body.light .avatar{
+   border: 10px solid lightslategray;
+}
